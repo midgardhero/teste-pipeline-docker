@@ -1,0 +1,7 @@
+on:
+  push:
+jobs:
+  docker:
+    uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
+    inputs:
+      tag: imagem_teste
