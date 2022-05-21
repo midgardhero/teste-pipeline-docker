@@ -3,5 +3,5 @@ on:
 jobs:
   docker:
     uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
-    inputs:
+    with:
       tag: imagem_teste
