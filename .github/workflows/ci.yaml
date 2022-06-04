@@ -12,8 +12,6 @@ jobs:
 
         default ignore = false
 
-        ignore_severities := {"HIGH"}
-
         ignore {
-          input.Severity == ignore_severities[_]
+        input.VulnerabilityID == "CVE-2020-36518"
         }
