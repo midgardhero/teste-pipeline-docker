@@ -9,4 +9,4 @@ jobs:
       tag: imagem_teste
       trivy_ignore: |
         CVE-2020-36518
-      push_image: ${{toJSON(github.event_name == "release")}}
+      push_image: ${{toJSON(github.event_name == 'release')}}
