@@ -6,7 +6,7 @@ jobs:
   docker:
     uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
     with:
-      tag: imagem_teste
+      tag: midgardhero/imagem_teste:latest
       trivy_ignore: |
         CVE-2020-36518
       push_image: ${{github.event_name == 'release'}}
