@@ -1,5 +1,7 @@
 on:
   push:
+  release:
+    types: [created]
 jobs:
   docker:
     uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
@@ -7,3 +9,4 @@ jobs:
       tag: imagem_teste
       trivy_ignore: |
         CVE-2020-36518
+      push_image: ${{github.event_name == "release"}}

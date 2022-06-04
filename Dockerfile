@@ -1,2 +1,2 @@
-FROM apache/tika:2.3.0
+FROM alpine:3
 RUN touch /teste
