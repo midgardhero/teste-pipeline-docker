@@ -5,3 +5,5 @@ jobs:
     uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
     with:
       tag: imagem_teste
+      trivy_ignore: |
+        CVE-2020-36518
