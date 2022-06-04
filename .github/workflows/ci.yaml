@@ -5,13 +5,3 @@ jobs:
     uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
     with:
       tag: imagem_teste
-      trivy_ignore_policy: |
-        package trivy
-
-        import data.lib.trivy
-
-        default ignore = false
-
-        ignore {
-        input.VulnerabilityID == "CVE-2020-36518"
-        }
