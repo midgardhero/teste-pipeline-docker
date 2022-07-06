@@ -4,11 +4,9 @@ on:
     types: [created]
 jobs:
   docker:
-    uses: "midgardhero/cicd_centralizado/tree/pipeline_docker/.github/workflows/docker_build.yaml@pipeline_docker"
+    uses: "midgardhero/cicd_centralizado/.github/workflows/docker_build.yaml@pipeline_docker"
     with:
       tag: midgardhero/imagem_teste:latest
-      trivy_ignore: |
-        CVE-2020-36518
       push_image: ${{github.event_name == 'release'}}
     secrets:
       docker_user: ${{secrets.DOCKER_LOGIN}}
