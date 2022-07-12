@@ -1,3 +1,4 @@
+name: "Pipeline para build de imagem docker"
 on:
   push:
   release:
